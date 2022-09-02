@@ -1,3 +1,11 @@
+'''
+RPS - ROCK, PAPER, SCISSORS 
+@version: 1.1
+@author: Johan Wrangö
+@date: 2022-09-02
+@description: A nice game against a super-AI RPS-player.
+'''
+
 import os
 import random
 import time
@@ -16,19 +24,20 @@ plays = 0
 
 while True:
     print(bcolors.YELLOW + "___________________________________")
-    print("(R)ock, (P)aper, (S)cissors: ", end="")
+    print("(R)ock, (P)aper, (S)cissors: ")
 
     while True:                             # Check keystrokes
         human_select = getwch().upper()
-        if human_select == "Q":
-            print(bcolors.HEADER + bcolors.BOLD, end="")
-            splash_screen("QUIT")
-            print(bcolors.ENDC)
-            time.sleep(2)
-            exit()
 
-        if human_select == "0" or human_select == "1" or human_select == "2" or human_select == "R" or human_select == "P" or human_select == "S":
+        if human_select == "Q" or human_select == "0" or human_select == "1" or human_select == "2" or human_select == "R" or human_select == "P" or human_select == "S":
             break
+
+    if human_select == "Q":                 # Quit game
+        print(bcolors.HEADER + bcolors.BOLD, end="")
+        splash_screen("QUIT")
+        print(bcolors.ENDC)                 # Restore default system colors
+        time.sleep(2)
+        exit()
 
     ai_select = random.randint(0, 2)
 
