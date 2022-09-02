@@ -1,5 +1,5 @@
-def gesture(which_hand):
-    if which_hand == "ROCK":
+def gesture(hand):
+    if hand == "ROCK":
         print("""
     
   
@@ -11,7 +11,7 @@ def gesture(which_hand):
  \____ROCK_____/
         """)
 
-    elif which_hand == "PAPER":
+    elif hand == "PAPER":
         print("""
     __ __ __
    |  |  |  |__
@@ -23,7 +23,7 @@ __ |¨¨|¨¨|¨¨|¨¨|
  \____PAPER____/
         """)
 
-    elif which_hand == "SCISSORS":
+    elif hand == "SCISSORS":
         print("""
  __       __
  \  \   /  /

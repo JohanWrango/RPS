@@ -15,7 +15,7 @@ from msvcrt import getwch
 
 os.system('cls')
 
-print(bcolors.HEADER + bcolors.BOLD)
+print(bcolors.YELLOW)
 splash_screen("START")
 
 wins = 0
@@ -33,7 +33,7 @@ while True:
             break
 
     if human_select == "Q":                 # Quit game
-        print(bcolors.HEADER + bcolors.BOLD, end="")
+        print(bcolors.YELLOW, end="")
         splash_screen("QUIT")
         print(bcolors.ENDC)                 # Restore default system colors
         time.sleep(2)
