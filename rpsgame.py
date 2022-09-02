@@ -16,7 +16,7 @@ plays = 0
 
 while True:
     print(bcolors.YELLOW + "___________________________________")
-    print("(R)ock, (P)aper, (S)cissors: ")
+    print("(R)ock, (P)aper, (S)cissors: ", end="")
 
     while True:                             # Check keystrokes
         human_select = getwch().upper()
